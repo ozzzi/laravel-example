@@ -19,11 +19,6 @@
                     <textarea class="form-control" name="description" rows="7">{{ old('description') }}</textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="slugInput" class="form-label">Slug</label>
-                    <input type="text" class="form-control" name="slug" id="slugInput" placeholder="slug"
-                           value="{{ old('slug') }}">
-                </div>
-                <div class="mb-3">
                     <button type="submit" class="btn btn-success">Save</button>
                 </div>
             </form>

@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class Article extends Model
 {
@@ -22,6 +23,7 @@ class Article extends Model
     {
         static::creating(static function ($model) {
             $model->user_id = Auth::id();
+            $model->slug = Str::slug($model->title);
         });
     }
 
